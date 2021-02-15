@@ -1,4 +1,5 @@
 from enum import Enum
+from dataclasses import dataclass
 
 
 SATOSHI = 0.00000001
@@ -9,7 +10,10 @@ class Currency(Enum):
     EUR = 'EUR'
     USD = 'USD'
     BTC = 'BTC'
+    ETH = 'ETH'
     DAI = 'DAI'
+    USDT = 'USDT'
+    PAX = 'PAX'
 
 
 class Brokers(Enum):

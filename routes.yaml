@@ -1,0 +1,125 @@
+#  Available institutions:
+#    - "Rabobank NL" (EUR)
+#    - "Banco Galicia ARG" (ARS)
+#    - "Let's Bit" (ARS, BTC, DAI)
+#    - "Ripio" (ARS, BTC, DAI)
+#    - "Bitvavo" (EUR, BTC, DAI)
+#    - "MyEtherWallet" (DAI)
+
+# Let's Bit BTC > Binance > Rabo
+- direction: send   # send | receive
+  amount: 140000.0
+  hops:
+    - institution: "Banco Galicia ARG"
+      currency: ARS
+    - institution: "Let's Bit"
+      currency: ARS
+    - institution: "Let's Bit"
+      currency: BTC
+#    - institution: "MyEtherWallet"
+#      currency: USDT
+    - institution: "Binance"
+      currency: BTC
+    - institution: "Binance"
+      currency: EUR
+    - institution: "Rabobank NL"
+      currency: EUR
+#
+# Let's Bit USDT > Binance > Rabo
+- direction: send   # send | receive
+  amount: 140000.0
+  hops:
+    - institution: "Banco Galicia ARG"
+      currency: ARS
+    - institution: "Let's Bit"
+      currency: ARS
+    - institution: "Let's Bit"
+      currency: USDT
+    - institution: "MyEtherWallet"
+      currency: USDT
+    - institution: "Binance"
+      currency: USDT
+    - institution: "Binance"
+      currency: EUR
+    - institution: "Rabobank NL"
+      currency: EUR
+#
+## Let's Bit USDT > Bitvavo > Rabo
+#- direction: send   # send | receive
+#  amount: 140000.0
+#  hops:
+#    - institution: "Banco Galicia ARG"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: USDT
+#    - institution: "MyEtherWallet"
+#      currency: USDT
+#    - institution: "Bitvavo"
+#      currency: USDT
+#    - institution: "Bitvavo"
+#      currency: EUR
+#    - institution: "Rabobank NL"
+#      currency: EUR
+#
+## Let's Bit DAI > Binance > Rabo
+#- direction: send   # send | receive
+#  amount: 140000.0
+#  hops:
+#    - institution: "Banco Galicia ARG"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: DAI
+#    - institution: "MyEtherWallet"
+#      currency: DAI
+#    - institution: "Binance"
+#      currency: DAI
+#    - institution: "Binance"
+#      currency: USDT
+#    - institution: "Binance"
+#      currency: EUR
+#    - institution: "Rabobank NL"
+#      currency: EUR
+#
+## Let's Bit DAI > Bitvavo > Rabo
+#- direction: send   # send | receive
+#  amount: 140000.0
+#  hops:
+#    - institution: "Banco Galicia ARG"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: DAI
+#    - institution: "MyEtherWallet"
+#      currency: DAI
+#    - institution: "Bitvavo"
+#      currency: DAI
+#    - institution: "Bitvavo"
+#      currency: EUR
+#    - institution: "Rabobank NL"
+#      currency: EUR
+
+#### EXPENSIVE
+#
+## Let's Bit DAI > Bitvavo > Rabo
+#- direction: send   # send | receive
+#  amount: 100000.0
+#  hops:
+#    - institution: "Banco Galicia ARG"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: ARS
+#    - institution: "Let's Bit"
+#      currency: DAI
+#    - institution: "MyEtherWallet"
+#      currency: DAI
+#    - institution: "Bitvavo"
+#      currency: DAI
+#    - institution: "Bitvavo"
+#      currency: EUR
+#    - institution: "Rabobank NL"
+#      currency: EUR

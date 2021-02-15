@@ -9,8 +9,8 @@ class Customer:
         src_broker = src_broker()
         dst_broker = dst_broker()
 
-        src_broker.sync_exchange_rate(src_currency, tx_currency)
-        dst_broker.sync_exchange_rate(tx_currency, dst_currency)
+        src_broker.get_online_rate(src_currency, tx_currency)
+        dst_broker.get_online_rate(tx_currency, dst_currency)
 
         # TX-currency to pay at destination
         tx_to_send = dst_broker.sell_to_receive(amount=amount, of_currency=dst_currency, for_currency=tx_currency)
