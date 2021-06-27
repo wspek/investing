@@ -149,17 +149,18 @@ class LetsBitExchange(CryptoExchange):
         return float(self.rates(src_currency, dst_currency)['sell'])
 
     def get_transfer_fee(self, currency):
-        # It seems the network fee is already incorporated in the fee that Let's Bit charges.
-        # fee = super(LetsBitExchange, self).get_transfer_fee(currency)
+        fee = super(LetsBitExchange, self).get_transfer_fee(currency)
 
         if currency == Currency.DAI:
-            return self.dai_withdrawal_fee
+            fee += self.dai_withdrawal_fee
         elif currency == Currency.BTC:
-            return self.btc_withdrawal_fee
+            fee += self.btc_withdrawal_fee
         elif currency == Currency.USDT:
-            return self.usdt_withdrawal_fee
+            fee += self.usdt_withdrawal_fee
         elif currency == Currency.PAX:
-            return self.pax_withdrawal_fee
+            fee += self.pax_withdrawal_fee
+
+        return fee
 
 
 class BitvavoExchange(CryptoExchange):
